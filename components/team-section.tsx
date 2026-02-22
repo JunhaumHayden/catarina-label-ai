@@ -11,6 +11,7 @@ import {
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { useI18n } from "@/lib/i18n"
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
 interface TeamMember {
   name: string
@@ -22,6 +23,7 @@ interface TeamMember {
   bioKey: string
   lattes: string
   linkedin: string
+  image?: string
 }
 
 const team: TeamMember[] = [
@@ -35,6 +37,7 @@ const team: TeamMember[] = [
     bioKey: "member.hudson.bio",
     lattes: "http://lattes.cnpq.br/7304886482933850",
     linkedin: "https://www.linkedin.com/in/hudson-afonso-167b1321",
+    image: "/placeholder-user.jpg",
   },
   {
     name: "Paulo Marcos de Assis",
@@ -46,6 +49,7 @@ const team: TeamMember[] = [
     bioKey: "member.paulo.bio",
     lattes: "https://lattes.cnpq.br/5654791012928641",
     linkedin: "https://www.linkedin.com/in/paulo-marcos-02b29b306",
+    image: "/placeholder-user.jpg",
   },
   {
     name: "Pedro Henrique Azevedo",
@@ -57,6 +61,7 @@ const team: TeamMember[] = [
     bioKey: "member.pedro.bio",
     lattes: "https://lattes.cnpq.br/7950947410325604",
     linkedin: "https://www.linkedin.com/in/pedro-henrique-azevedo-501300145",
+    image: "/placeholder-user.jpg",
   },
   {
     name: "Carlos Benedito Hayden de Albuquerque Junior",
@@ -68,6 +73,7 @@ const team: TeamMember[] = [
     bioKey: "member.carlos.bio",
     lattes: "https://lattes.cnpq.br/6805864277419502",
     linkedin: "https://www.linkedin.com/in/carlos-hayden-junior/",
+    image: "/placeholder-user.jpg",
   },
   {
     name: "Francisco Bortolanza",
@@ -79,6 +85,7 @@ const team: TeamMember[] = [
     bioKey: "member.francisco.bio",
     lattes: "https://lattes.cnpq.br/4785440056879106",
     linkedin: "",
+    image: "/placeholder-user.jpg",
   },
   {
     name: "Eduardo Cacilha",
@@ -90,6 +97,7 @@ const team: TeamMember[] = [
     bioKey: "member.eduardo.bio",
     lattes: "https://buscatextual.cnpq.br/buscatextual/visualizacv.do",
     linkedin: "https://www.linkedin.com/in/eduardo-cacilha-196581124/",
+    image: "/placeholder-user.jpg",
   },
 ]
 
@@ -107,9 +115,12 @@ function TeamCard({
       onClick={onClick}
       className="group flex flex-col items-center rounded-xl border border-border bg-card p-6 text-center transition-all hover:border-primary/40 hover:bg-primary/5"
     >
-      <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-2xl font-bold text-primary transition-transform group-hover:scale-105">
-        {member.initials}
-      </div>
+      <Avatar className="h-20 w-20 transition-transform group-hover:scale-105">
+        <AvatarImage src={member.image} alt={member.name} />
+        <AvatarFallback className="bg-primary/10 text-2xl font-bold text-primary">
+          {member.initials}
+        </AvatarFallback>
+      </Avatar>
       <h3 className="mt-4 text-base font-semibold text-card-foreground">
         {member.shortName}
       </h3>
@@ -142,9 +153,12 @@ function TeamModal({
       <DialogContent className="max-h-[90vh] overflow-y-auto border-border bg-card sm:max-w-lg">
         <DialogHeader>
           <div className="flex items-center gap-4">
-            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xl font-bold text-primary">
-              {member.initials}
-            </div>
+            <Avatar className="h-16 w-16 shrink-0">
+              <AvatarImage src={member.image} alt={member.name} />
+              <AvatarFallback className="bg-primary/10 text-xl font-bold text-primary">
+                {member.initials}
+              </AvatarFallback>
+            </Avatar>
             <div className="text-left">
               <DialogTitle className="text-lg text-card-foreground">
                 {member.name}

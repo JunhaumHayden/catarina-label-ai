@@ -103,7 +103,7 @@ const translations: Record<Locale, Record<string, string>> = {
     "member.carlos.role": "AI Applied to Health & Data",
     "member.carlos.level": "Undergraduate",
     "member.carlos.bio":
-      "Undergraduate in Computer Science at UFSC, working in the research line of Artificial Intelligence applied to Health Management, with focus on Electronic Health Record data within the Ceos Project. Contributes to the development of solutions for intelligent decision support in complex public sector domains.",
+      "Undergraduate in Computer Science at UFSC, working in the research line of Artificial Intelligence applied to Health Management, with focus on the use of Electronic Health Record data within the Ceos Project. Contributes to the development of solutions for intelligent decision support in complex public sector domains.",
 
     "member.francisco.role": "Data Extraction",
     "member.francisco.level": "Undergraduate",
@@ -171,9 +171,9 @@ const translations: Record<Locale, Record<string, string>> = {
     // Hero
     "hero.badge": "Projeto Fundo Catarina",
     "hero.subtitle":
-      "Framework semi-automatizado de rotulagem de dados que utiliza Inteligencia Artificial para acelerar o treinamento de modelos, com foco no setor juridico.",
+      "Framework semi-automatizado de rotulagem de dados que utiliza Inteligência Artificial para acelerar o treinamento de modelos, com foco no setor jurídico.",
     "hero.cta1": "Conhecer o Projeto",
-    "hero.cta2": "Conheca a Equipe",
+    "hero.cta2": "Conheça a Equipe",
     "hero.stat1.value": "10k+",
     "hero.stat1.label": "Textos rotulados",
     "hero.stat2.value": "521",
@@ -185,99 +185,99 @@ const translations: Record<Locale, Record<string, string>> = {
 
     // About
     "about.tag": "Sobre o Projeto",
-    "about.title": "Da academia para a inovacao",
+    "about.title": "Da academia para a inovação",
     "about.subtitle":
-      "Nascido da experiencia pratica de pesquisadores da UFSC no Projeto Ceos, o Catarina Label AI transforma um desafio real em uma solucao acessivel para pesquisadores e empreendedores catarinenses.",
+      "Nascido da experiência prática de pesquisadores da UFSC no Projeto Ceos, o Catarina Label AI transforma um desafio real em uma solução acessível para pesquisadores e empreendedores catarinenses.",
     "about.card1.title": "O Problema",
     "about.card1.desc":
-      "A rotulagem de dados e um gargalo critico para a inovacao em IA. E uma tarefa manual, repetitiva e massiva que consome centenas de horas de trabalho. Em nosso projeto, rotular 100 textos demandava em media duas horas de trabalho.",
-    "about.card2.title": "A Solucao",
+      "A rotulagem de dados é um gargalo crítico para a inovação em IA. É uma tarefa manual, repetitiva e massiva que consome centenas de horas de trabalho. Em nosso projeto, rotular 100 textos demandava em média duas horas de trabalho.",
+    "about.card2.title": "A Solução",
     "about.card2.desc":
-      "Idealizamos o Catarina-Label AI: um framework semi-automatizado que utiliza a propria IA para acelerar o treinamento de modelos, combinando rotulagem automatizada com validacao humana inteligente.",
+      "Idealizamos o Catarina-Label AI: um framework semi-automatizado que utiliza a própria IA para acelerar o treinamento de modelos, combinando rotulagem automatizada com validação humana inteligente.",
     "about.card3.title": "O Foco",
     "about.card3.desc":
-      "Com foco principal na area juridica, o projeto visa posicionar a UFSC e Santa Catarina como polo de referencia no desenvolvimento de ferramentas de IA aplicadas ao contexto juridico e ao setor publico.",
+      "Com foco principal na área jurídica, o projeto visa posicionar a UFSC e Santa Catarina como polo de referência no desenvolvimento de ferramentas de IA aplicadas ao contexto jurídico e ao setor público.",
 
     // Tech
     "tech.tag": "Tecnologias",
     "tech.title": "Estado da arte em rotulagem de dados",
     "tech.subtitle":
-      "Integramos tecnicas avancadas do estado da arte na area de rotulagem de dados para IA, fundamentadas por pesquisas recentes.",
-    "tech.t1.title": "Pre-Rotulagem com Modelos Fundacionais",
+      "Integramos técnicas avançadas do estado da arte na área de rotulagem de dados para IA, fundamentadas por pesquisas recentes.",
+    "tech.t1.title": "Pré-Rotulagem com Modelos Fundacionais",
     "tech.t1.desc":
-      "Utilizacao de modelos pre-treinados (LLMs) para gerar automaticamente uma primeira versao dos rotulos, seguindo a abordagem emergente 'LLM as a Judge' que apresenta resultados promissores na literatura internacional.",
-    "tech.t1.h1": "Reducao significativa de custo e tempo",
-    "tech.t1.h2": "Concordancia similar a anotadores humanos",
-    "tech.t1.h3": "Custo ate 100x menor que anotacao manual",
+      "Utilização de modelos pré-treinados (LLMs) para gerar automaticamente uma primeira versão dos rótulos, seguindo a abordagem emergente 'LLM as a Judge' que apresenta resultados promissores na literatura internacional.",
+    "tech.t1.h1": "Redução significativa de custo e tempo",
+    "tech.t1.h2": "Concordância similar a anotadores humanos",
+    "tech.t1.h3": "Custo até 100x menor que anotação manual",
     "tech.t2.title": "Aprendizagem Ativa (Active Learning)",
     "tech.t2.desc":
-      "O modelo de IA identifica quais dados sao mais dificeis e solicita a anotacao humana apenas para os exemplos mais informativos, otimizando o tempo do especialista.",
-    "tech.t2.h1": "Selecao inteligente de amostras",
-    "tech.t2.h2": "Otimizacao do tempo do especialista",
+      "O modelo de IA identifica quais dados são mais difíceis e solicita a anotação humana apenas para os exemplos mais informativos, otimizando o tempo do especialista.",
+    "tech.t2.h1": "Seleção inteligente de amostras",
+    "tech.t2.h2": "Otimização do tempo do especialista",
     "tech.t2.h3": "Foco nos exemplos mais informativos",
     "tech.t3.title": "Interface Human-in-the-Loop",
     "tech.t3.desc":
-      "Um fluxo de trabalho interativo em que o humano valida, corrige e refina as decisoes da IA, tornando o processo uma colaboracao eficiente entre homem e maquina.",
-    "tech.t3.h1": "Validacao humana integrada",
-    "tech.t3.h2": "Refinamento continuo do modelo",
-    "tech.t3.h3": "Colaboracao homem-maquina",
+      "Um fluxo de trabalho interativo em que o humano valida, corrige e refina as decisões da IA, tornando o processo uma colaboração eficiente entre homem e máquina.",
+    "tech.t3.h1": "Validação humana integrada",
+    "tech.t3.h2": "Refinamento contínuo do modelo",
+    "tech.t3.h3": "Colaboração homem-máquina",
 
     // Team
     "team.tag": "Equipe",
     "team.title": "Pesquisadores e Desenvolvedores",
     "team.subtitle":
-      "Nossa equipe e composta por pesquisadores da UFSC do Projeto Ceos, com competencias em Banco de Dados, Machine Learning, NLP e Engenharia de Software.",
+      "Nossa equipe é composta por pesquisadores da UFSC do Projeto Ceos, com competências em Banco de Dados, Machine Learning, NLP e Engenharia de Software.",
     "team.modal.close": "Fechar",
-    "team.modal.lattes": "Curriculo Lattes",
+    "team.modal.lattes": "Currículo Lattes",
 
     // Team members
     "member.hudson.role": "Banco de Dados & Qualidade de Dados",
     "member.hudson.level": "Doutorando",
     "member.hudson.bio":
-      "Doutorando em Ciencia da Computacao na UFSC, atuando na linha de pesquisa de Banco de Dados. Integra a equipe do Projeto Ceos, parceria entre a UFSC e o Ministerio Publico de Santa Catarina (MPSC). Possui experiencia em Banco de Dados relacionais e NoSQL, gestao de qualidade de dados em processos de Inteligencia Artificial, com foco em auditoria de dados na deteccao de fraudes aplicadas ao setor publico.",
+      "Doutorando em Ciência da Computação na UFSC, atuando na linha de pesquisa de Banco de Dados. Integra a equipe do Projeto Ceos, parceria entre a UFSC e o Ministério Público de Santa Catarina (MPSC). Possui experiência em Banco de Dados relacionais e NoSQL, gestão de qualidade de dados em processos de Inteligência Artificial, com foco em auditoria de dados na detecção de fraudes aplicadas ao setor público.",
 
     "member.paulo.role": "Machine Learning & IA Computacional",
     "member.paulo.level": "Mestrando",
     "member.paulo.bio":
-      "Mestrando em Ciencia da Computacao na UFSC, atuando na linha de pesquisa Machine Learning e Inteligencia Computacional. Integra a equipe do Projeto Ceos. Possui experiencia em projetos de aprendizado de maquina, com foco na deteccao de fraudes e no desenvolvimento de ferramentas baseadas em Inteligencia Artificial aplicadas ao setor publico.",
+      "Mestrando em Ciência da Computação na UFSC, atuando na linha de pesquisa Machine Learning e Inteligência Computacional. Integra a equipe do Projeto Ceos. Possui experiência em projetos de aprendizado de máquina, com foco na detecção de fraudes e no desenvolvimento de ferramentas baseadas em Inteligência Artificial aplicadas ao setor público.",
 
-    "member.pedro.role": "NLP & Integracao de Dados",
+    "member.pedro.role": "NLP & Integração de Dados",
     "member.pedro.level": "Mestrando",
     "member.pedro.bio":
-      "Mestrando em Ciencia da Computacao pela UFSC, atua na linha de pesquisa em Banco de Dados. Integra a equipe do Projeto Ceos. Possui experiencia nas areas de processamento de linguagem natural, inteligencia artificial centrada em dados, integracao e qualidade de dados, com foco em extracao de informacao, classificacao e ligacao de entidades.",
+      "Mestrando em Ciência da Computação pela UFSC, atua na linha de pesquisa em Banco de Dados. Integra a equipe do Projeto Ceos. Possui experiência nas áreas de processamento de linguagem natural, inteligência artificial centrada em dados, integração e qualidade de dados, com foco em extração de informação, classificação e ligação de entidades.",
 
-    "member.carlos.role": "IA aplicada a Saude & Dados",
+    "member.carlos.role": "IA aplicada à Saúde & Dados",
     "member.carlos.level": "Graduando",
     "member.carlos.bio":
-      "Graduando em Ciencia da Computacao pela UFSC, atua na linha de pesquisa em Inteligencia Artificial aplicada a Gestao em Saude, com foco na utilizacao de dados do Registro Eletronico de Saude no ambito do Projeto Ceos. Contribui para o desenvolvimento de solucoes voltadas ao apoio a tomada de decisao inteligente em dominios complexos do setor publico.",
+      "Graduando em Ciência da Computação pela UFSC, atua na linha de pesquisa em Inteligência Artificial aplicada à Gestão em Saúde, com foco na utilização de dados do Registro Eletrônico de Saúde no âmbito do Projeto Ceos. Contribui para o desenvolvimento de soluções voltadas ao apoio à tomada de decisão inteligente em domínios complexos do setor público.",
 
-    "member.francisco.role": "Extracao de Dados",
+    "member.francisco.role": "Extração de Dados",
     "member.francisco.level": "Graduando",
     "member.francisco.bio":
-      "Graduando em Ciencia da Computacao pela UFSC, atuando na linha de pesquisa de Extracao de Dados. Integra a equipe do Projeto Ceos. Contribui para o desenvolvimento de solucoes que aprimoram a preparacao e organizacao de dados de documentos juridicos para modelos de IA.",
+      "Graduando em Ciência da Computação pela UFSC, atuando na linha de pesquisa de Extração de Dados. Integra a equipe do Projeto Ceos. Contribui para o desenvolvimento de soluções que aprimoram a preparação e organização de dados de documentos jurídicos para modelos de IA.",
 
-    "member.eduardo.role": "Backend & Automacao",
+    "member.eduardo.role": "Backend & Automação",
     "member.eduardo.level": "Graduando",
     "member.eduardo.bio":
-      "Graduando em Sistemas de Informacao pela UFSC, com interesse em desenvolvimento backend, automacao e qualidade de software. Possui experiencia em extensao universitaria como voluntario no Projeto Florescer, atuando na gestao de tarefas, marketing e tutoria em aulas de programacao. Participou de eventos como a FERMAT, Feira de Cursos da UFSC e CTC de Portas Abertas.",
+      "Graduando em Sistemas de Informação pela UFSC, com interesse em desenvolvimento backend, automação e qualidade de software. Possui experiência em extensão universitária como voluntário no Projeto Florescer, atuando na gestão de tarefas, marketing e tutoria em aulas de programação. Participou de eventos como a FERMAT, Feira de Cursos da UFSC e CTC de Portas Abertas.",
 
     // Impact
-    "impact.tag": "Impacto & Publico-Alvo",
-    "impact.title": "Para quem construimos",
+    "impact.tag": "Impacto & Público-Alvo",
+    "impact.title": "Para quem construímos",
     "impact.subtitle":
-      "O Catarina Label AI atende desde pesquisadores academicos ate startups e orgaos publicos, oferecendo uma solucao acessivel e escalavel.",
+      "O Catarina Label AI atende desde pesquisadores acadêmicos até startups e órgãos públicos, oferecendo uma solução acessível e escalável.",
     "impact.a1.title": "Lawtechs & Legaltechs",
     "impact.a1.desc":
-      "Startups de tecnologia juridica que lidam com grandes volumes de documentos textuais como processos, peticoes e jurisprudencias.",
+      "Startups de tecnologia jurídica que lidam com grandes volumes de documentos textuais como processos, petições e jurisprudências.",
     "impact.a2.title": "Grupos de Pesquisa",
     "impact.a2.desc":
-      "Pesquisadores em Direito e Inteligencia Artificial que necessitam de datasets anotados para treinamento de modelos.",
-    "impact.a3.title": "Orgaos Publicos",
+      "Pesquisadores em Direito e Inteligência Artificial que necessitam de datasets anotados para treinamento de modelos.",
+    "impact.a3.title": "Órgãos Públicos",
     "impact.a3.desc":
-      "Departamentos de inovacao de orgaos publicos e escritorios de advocacia que buscam eficiencia com IA.",
-    "impact.a4.title": "Ecossistema de Inovacao",
+      "Departamentos de inovação de órgãos públicos e escritórios de advocacia que buscam eficiência com IA.",
+    "impact.a4.title": "Ecossistema de Inovação",
     "impact.a4.desc":
-      "Estudantes de pos-graduacao e startups de base tecnologica em areas como Engenharias, Saude e Financas.",
+      "Estudantes de pós-graduação e startups de base tecnológica em áreas como Engenharias, Saúde e Finanças.",
     "impact.metricsLabel":
       "Dados do Ecossistema de Tecnologia de Santa Catarina (ACATE Tech Report 2023)",
     "impact.m1.value": "22 mil",
@@ -285,14 +285,14 @@ const translations: Record<Locale, Record<string, string>> = {
     "impact.m2.value": "R$23,6B",
     "impact.m2.label": "Faturamento anual do setor",
     "impact.m3.value": "35,3%",
-    "impact.m3.label": "Ja utilizam IA/ML",
+    "impact.m3.label": "Já utilizam IA/ML",
     "impact.m4.value": "7.700+",
     "impact.m4.label": "Empresas potencialmente beneficiadas",
 
     // CTA
     "cta.title": "Quer saber mais sobre o Catarina Label AI?",
     "cta.subtitle":
-      "Estamos na fase de ideacao e validacao. Se voce e pesquisador, empreendedor ou representa uma instituicao interessada em rotulagem inteligente de dados, entre em contato conosco.",
+      "Estamos na fase de ideação e validação. Se você é pesquisador, empreendedor ou representa uma instituição interessada em rotulagem inteligente de dados, entre em contato conosco.",
     "cta.btn1": "Entrar em Contato",
     "cta.btn2": "Conectar no LinkedIn",
 
@@ -308,7 +308,7 @@ const translations: Record<Locale, Record<string, string>> = {
 const I18nContext = createContext<I18nContextType | null>(null)
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<Locale>("en")
+  const [locale, setLocale] = useState<Locale>("pt")
 
   const t = (key: string): string => {
     return translations[locale][key] ?? key

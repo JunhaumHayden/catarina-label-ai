@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Menu, X, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useI18n, type Locale } from "@/lib/i18n"
+import { getBasePath } from "@/lib/utils"
 
 const navLinks = [
   { labelKey: "nav.about", href: "#sobre" },
@@ -28,7 +29,7 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-center gap-2">
+        <a href={getBasePath()} className="flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
             <span className="text-sm font-bold text-primary-foreground">CL</span>
           </div>

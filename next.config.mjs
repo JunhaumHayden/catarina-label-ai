@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/catarina-label-ai',
   typescript: {
     ignoreBuildErrors: true,
   },
