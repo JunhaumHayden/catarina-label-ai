@@ -7,9 +7,9 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains-mono' })
 
 export const metadata: Metadata = {
-  title: 'Catarina Label AI - Framework de Rotulagem de Dados com IA',
+  title: 'Catarina Label AI - AI-Powered Data Labeling Framework',
   description:
-    'Framework semi-automatizado de rotulagem de dados que utiliza Inteligencia Artificial para acelerar o treinamento de modelos, com foco no setor juridico. Desenvolvido por pesquisadores da UFSC.',
+    'Semi-automated data labeling framework that uses Artificial Intelligence to accelerate model training, focused on the legal sector. Developed by UFSC researchers.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body className="font-sans antialiased">
         {children}
         <Analytics />

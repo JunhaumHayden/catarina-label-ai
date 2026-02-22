@@ -1,62 +1,51 @@
-import { Bot, Brain, Users, CheckCircle2 } from "lucide-react"
+"use client"
 
-const technologies = [
+import { Bot, Brain, Users, CheckCircle2 } from "lucide-react"
+import { useI18n } from "@/lib/i18n"
+
+const techKeys = [
   {
     icon: Bot,
-    title: "Pre-Rotulagem com Modelos Fundacionais",
-    description:
-      "Utilizacao de modelos pre-treinados (LLMs) para gerar automaticamente uma primeira versao dos rotulos, seguindo a abordagem emergente 'LLM as a Judge' que apresenta resultados promissores na literatura internacional.",
-    highlights: [
-      "Reducao significativa de custo e tempo",
-      "Concordancia similar a anotadores humanos",
-      "Custo ate 100x menor que anotacao manual",
-    ],
+    titleKey: "tech.t1.title",
+    descKey: "tech.t1.desc",
+    highlights: ["tech.t1.h1", "tech.t1.h2", "tech.t1.h3"],
   },
   {
     icon: Brain,
-    title: "Aprendizagem Ativa (Active Learning)",
-    description:
-      "O modelo de IA identifica quais dados sao mais dificeis e solicita a anotacao humana apenas para os exemplos mais informativos, otimizando o tempo do especialista.",
-    highlights: [
-      "Selecao inteligente de amostras",
-      "Otimizacao do tempo do especialista",
-      "Foco nos exemplos mais informativos",
-    ],
+    titleKey: "tech.t2.title",
+    descKey: "tech.t2.desc",
+    highlights: ["tech.t2.h1", "tech.t2.h2", "tech.t2.h3"],
   },
   {
     icon: Users,
-    title: "Interface Human-in-the-Loop",
-    description:
-      "Um fluxo de trabalho interativo em que o humano valida, corrige e refina as decisoes da IA, tornando o processo uma colaboracao eficiente entre homem e maquina.",
-    highlights: [
-      "Validacao humana integrada",
-      "Refinamento continuo do modelo",
-      "Colaboracao homem-maquina",
-    ],
+    titleKey: "tech.t3.title",
+    descKey: "tech.t3.desc",
+    highlights: ["tech.t3.h1", "tech.t3.h2", "tech.t3.h3"],
   },
 ]
 
 export function TechSection() {
+  const { t } = useI18n()
+
   return (
     <section id="tecnologias" className="border-t border-border bg-card py-20 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <p className="text-sm font-medium tracking-widest text-primary uppercase">
-            Tecnologias
+            {t("tech.tag")}
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold text-foreground md:text-4xl">
-            Estado da arte em rotulagem de dados
+            {t("tech.title")}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-muted-foreground leading-relaxed">
-            Integramos tecnicas avancadas do estado da arte na area de rotulagem
-            de dados para IA, fundamentadas por pesquisas recentes.
+            {t("tech.subtitle")}
           </p>
         </div>
 
         <div className="mt-16 flex flex-col gap-8">
-          {technologies.map((tech, i) => (
+          {techKeys.map((tech, i) => (
             <div
-              key={tech.title}
+              key={tech.titleKey}
               className={`flex flex-col gap-8 rounded-xl border border-border bg-background p-8 md:flex-row md:items-center md:p-10 ${
                 i % 2 !== 0 ? "md:flex-row-reverse" : ""
               }`}
@@ -66,20 +55,20 @@ export function TechSection() {
                   <tech.icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-5 text-xl font-semibold text-foreground">
-                  {tech.title}
+                  {t(tech.titleKey)}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {tech.description}
+                  {t(tech.descKey)}
                 </p>
               </div>
               <div className="flex flex-1 flex-col gap-3">
-                {tech.highlights.map((h) => (
+                {tech.highlights.map((hKey) => (
                   <div
-                    key={h}
+                    key={hKey}
                     className="flex items-center gap-3 rounded-lg border border-border bg-card p-4"
                   >
                     <CheckCircle2 className="h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-sm text-card-foreground">{h}</span>
+                    <span className="text-sm text-card-foreground">{t(hKey)}</span>
                   </div>
                 ))}
               </div>

@@ -1,4 +1,10 @@
+"use client"
+
+import { useI18n } from "@/lib/i18n"
+
 export function Footer() {
+  const { t } = useI18n()
+
   return (
     <footer className="border-t border-border bg-card py-10">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 md:flex-row md:justify-between">
@@ -12,8 +18,7 @@ export function Footer() {
         </div>
 
         <p className="text-center text-xs text-muted-foreground">
-          Desenvolvido por pesquisadores da Universidade Federal de Santa
-          Catarina (UFSC) &mdash; Projeto Fundo Catarina
+          {t("footer.description")}
         </p>
 
         <div className="flex gap-6">
@@ -21,19 +26,19 @@ export function Footer() {
             href="#sobre"
             className="text-xs text-muted-foreground transition-colors hover:text-foreground"
           >
-            Sobre
+            {t("footer.about")}
           </a>
           <a
             href="#equipe"
             className="text-xs text-muted-foreground transition-colors hover:text-foreground"
           >
-            Equipe
+            {t("footer.team")}
           </a>
           <a
             href="#contato"
             className="text-xs text-muted-foreground transition-colors hover:text-foreground"
           >
-            Contato
+            {t("footer.contact")}
           </a>
         </div>
       </div>

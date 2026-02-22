@@ -10,15 +10,16 @@ import {
 } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { useI18n } from "@/lib/i18n"
 
 interface TeamMember {
   name: string
   shortName: string
   initials: string
-  role: string
-  level: string
+  roleKey: string
+  levelKey: string
   email: string
-  bio: string
+  bioKey: string
   lattes: string
   linkedin: string
 }
@@ -28,10 +29,10 @@ const team: TeamMember[] = [
     name: "Hudson Afonso Batista da Silva",
     shortName: "Hudson Afonso",
     initials: "HA",
-    role: "Banco de Dados & Qualidade de Dados",
-    level: "Doutorando",
+    roleKey: "member.hudson.role",
+    levelKey: "member.hudson.level",
     email: "hudson.silva@ifpa.edu.br",
-    bio: "Doutorando em Ciencia da Computacao na UFSC, atuando na linha de pesquisa de Banco de Dados. Integra a equipe do Projeto Ceos, parceria entre a UFSC e o Ministerio Publico de Santa Catarina (MPSC). Possui experiencia em Banco de Dados relacionais e NoSQL, gestao de qualidade de dados em processos de Inteligencia Artificial, com foco em auditoria de dados na deteccao de fraudes aplicadas ao setor publico.",
+    bioKey: "member.hudson.bio",
     lattes: "http://lattes.cnpq.br/7304886482933850",
     linkedin: "https://www.linkedin.com/in/hudson-afonso-167b1321",
   },
@@ -39,10 +40,10 @@ const team: TeamMember[] = [
     name: "Paulo Marcos de Assis",
     shortName: "Paulo Marcos",
     initials: "PM",
-    role: "Machine Learning & IA Computacional",
-    level: "Mestrando",
+    roleKey: "member.paulo.role",
+    levelKey: "member.paulo.level",
     email: "paulo.marcos.de.assis@gmail.com",
-    bio: "Mestrando em Ciencia da Computacao na UFSC, atuando na linha de pesquisa Machine Learning e Inteligencia Computacional. Integra a equipe do Projeto Ceos. Possui experiencia em projetos de aprendizado de maquina, com foco na deteccao de fraudes e no desenvolvimento de ferramentas baseadas em Inteligencia Artificial aplicadas ao setor publico.",
+    bioKey: "member.paulo.bio",
     lattes: "https://lattes.cnpq.br/5654791012928641",
     linkedin: "https://www.linkedin.com/in/paulo-marcos-02b29b306",
   },
@@ -50,10 +51,10 @@ const team: TeamMember[] = [
     name: "Pedro Henrique Azevedo",
     shortName: "Pedro Henrique",
     initials: "PH",
-    role: "NLP & Integracao de Dados",
-    level: "Mestrando",
+    roleKey: "member.pedro.role",
+    levelKey: "member.pedro.level",
     email: "pedro.henrique.azevedo@posgrad.ufsc.br",
-    bio: "Mestrando em Ciencia da Computacao pela UFSC, atua na linha de pesquisa em Banco de Dados. Integra a equipe do Projeto Ceos. Possui experiencia nas areas de processamento de linguagem natural, inteligencia artificial centrada em dados, integracao e qualidade de dados, com foco em extracao de informacao, classificacao e ligacao de entidades.",
+    bioKey: "member.pedro.bio",
     lattes: "https://lattes.cnpq.br/7950947410325604",
     linkedin: "https://www.linkedin.com/in/pedro-henrique-azevedo-501300145",
   },
@@ -61,10 +62,10 @@ const team: TeamMember[] = [
     name: "Carlos Benedito Hayden de Albuquerque Junior",
     shortName: "Carlos Hayden Jr.",
     initials: "CH",
-    role: "IA aplicada a Saude & Dados",
-    level: "Graduando",
+    roleKey: "member.carlos.role",
+    levelKey: "member.carlos.level",
     email: "hayden.junior@grad.ufsc.br",
-    bio: "Graduando em Ciencia da Computacao pela UFSC, atua na linha de pesquisa em Inteligencia Artificial aplicada a Gestao em Saude, com foco na utilizacao de dados do Registro Eletronico de Saude no ambito do Projeto Ceos. Contribui para o desenvolvimento de solucoes voltadas ao apoio a tomada de decisao inteligente em dominios complexos do setor publico.",
+    bioKey: "member.carlos.bio",
     lattes: "https://lattes.cnpq.br/6805864277419502",
     linkedin: "https://www.linkedin.com/in/carlos-hayden-junior/",
   },
@@ -72,10 +73,10 @@ const team: TeamMember[] = [
     name: "Francisco Bortolanza",
     shortName: "Francisco Bortolanza",
     initials: "FB",
-    role: "Extracao de Dados",
-    level: "Graduando",
+    roleKey: "member.francisco.role",
+    levelKey: "member.francisco.level",
     email: "bortolanza.francisco@gmail.com",
-    bio: "Graduando em Ciencia da Computacao pela UFSC, atuando na linha de pesquisa de Extracao de Dados. Integra a equipe do Projeto Ceos. Contribui para o desenvolvimento de solucoes que aprimoram a preparacao e organizacao de dados de documentos juridicos para modelos de IA.",
+    bioKey: "member.francisco.bio",
     lattes: "https://lattes.cnpq.br/4785440056879106",
     linkedin: "",
   },
@@ -83,10 +84,10 @@ const team: TeamMember[] = [
     name: "Eduardo Cacilha",
     shortName: "Eduardo Cacilha",
     initials: "EC",
-    role: "Backend & Automacao",
-    level: "Graduando",
+    roleKey: "member.eduardo.role",
+    levelKey: "member.eduardo.level",
     email: "",
-    bio: "Graduando em Sistemas de Informacao pela UFSC, com interesse em desenvolvimento backend, automacao e qualidade de software. Possui experiencia em extensao universitaria como voluntario no Projeto Florescer, atuando na gestao de tarefas, marketing e tutoria em aulas de programacao. Participou de eventos como a FERMAT, Feira de Cursos da UFSC e CTC de Portas Abertas.",
+    bioKey: "member.eduardo.bio",
     lattes: "https://buscatextual.cnpq.br/buscatextual/visualizacv.do",
     linkedin: "https://www.linkedin.com/in/eduardo-cacilha-196581124/",
   },
@@ -95,9 +96,11 @@ const team: TeamMember[] = [
 function TeamCard({
   member,
   onClick,
+  t,
 }: {
   member: TeamMember
   onClick: () => void
+  t: (key: string) => string
 }) {
   return (
     <button
@@ -114,9 +117,9 @@ function TeamCard({
         variant="secondary"
         className="mt-2 bg-secondary text-secondary-foreground"
       >
-        {member.level}
+        {t(member.levelKey)}
       </Badge>
-      <p className="mt-2 text-xs text-muted-foreground">{member.role}</p>
+      <p className="mt-2 text-xs text-muted-foreground">{t(member.roleKey)}</p>
     </button>
   )
 }
@@ -125,10 +128,12 @@ function TeamModal({
   member,
   open,
   onClose,
+  t,
 }: {
   member: TeamMember | null
   open: boolean
   onClose: () => void
+  t: (key: string) => string
 }) {
   if (!member) return null
 
@@ -146,10 +151,10 @@ function TeamModal({
               </DialogTitle>
               <div className="mt-1 flex flex-wrap items-center gap-2">
                 <Badge className="bg-primary text-primary-foreground">
-                  {member.level}
+                  {t(member.levelKey)}
                 </Badge>
                 <span className="text-xs text-muted-foreground">
-                  {member.role}
+                  {t(member.roleKey)}
                 </span>
               </div>
             </div>
@@ -158,7 +163,7 @@ function TeamModal({
 
         <div className="mt-4 space-y-4">
           <p className="text-sm leading-relaxed text-muted-foreground">
-            {member.bio}
+            {t(member.bioKey)}
           </p>
 
           <div className="flex flex-col gap-2 rounded-lg border border-border bg-background p-4">
@@ -190,14 +195,14 @@ function TeamModal({
                 className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
               >
                 <ExternalLink className="h-4 w-4" />
-                Curriculo Lattes
+                {t("team.modal.lattes")}
               </a>
             )}
           </div>
 
           <div className="flex justify-end">
             <Button variant="outline" size="sm" onClick={onClose} className="text-foreground">
-              Fechar
+              {t("team.modal.close")}
             </Button>
           </div>
         </div>
@@ -208,21 +213,20 @@ function TeamModal({
 
 export function TeamSection() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null)
+  const { t } = useI18n()
 
   return (
     <section id="equipe" className="py-20 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <p className="text-sm font-medium tracking-widest text-primary uppercase">
-            Equipe
+            {t("team.tag")}
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold text-foreground md:text-4xl">
-            Pesquisadores e Desenvolvedores
+            {t("team.title")}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-muted-foreground leading-relaxed">
-            Nossa equipe e composta por pesquisadores da UFSC do Projeto Ceos,
-            com competencias em Banco de Dados, Machine Learning, NLP e
-            Engenharia de Software.
+            {t("team.subtitle")}
           </p>
         </div>
 
@@ -232,6 +236,7 @@ export function TeamSection() {
               key={member.name}
               member={member}
               onClick={() => setSelectedMember(member)}
+              t={t}
             />
           ))}
         </div>
@@ -241,6 +246,7 @@ export function TeamSection() {
         member={selectedMember}
         open={!!selectedMember}
         onClose={() => setSelectedMember(null)}
+        t={t}
       />
     </section>
   )

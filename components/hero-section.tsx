@@ -1,8 +1,20 @@
+"use client"
+
 import { ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { useI18n } from "@/lib/i18n"
 
 export function HeroSection() {
+  const { t } = useI18n()
+
+  const stats = [
+    { valueKey: "hero.stat1.value", labelKey: "hero.stat1.label" },
+    { valueKey: "hero.stat2.value", labelKey: "hero.stat2.label" },
+    { valueKey: "hero.stat3.value", labelKey: "hero.stat3.label" },
+    { valueKey: "hero.stat4.value", labelKey: "hero.stat4.label" },
+  ]
+
   return (
     <section className="relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-32">
       {/* Background grid */}
@@ -15,7 +27,7 @@ export function HeroSection() {
           className="mb-6 inline-flex items-center gap-2 border-primary/30 bg-primary/10 px-4 py-1.5 text-primary"
         >
           <Sparkles className="h-3.5 w-3.5" />
-          <span>Projeto Fundo Catarina</span>
+          <span>{t("hero.badge")}</span>
         </Badge>
 
         <h1 className="mx-auto max-w-4xl text-balance text-4xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl">
@@ -24,37 +36,30 @@ export function HeroSection() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-          Framework semi-automatizado de rotulagem de dados que utiliza
-          Inteligencia Artificial para acelerar o treinamento de modelos, com
-          foco no setor juridico.
+          {t("hero.subtitle")}
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button size="lg" asChild className="gap-2">
             <a href="#sobre">
-              Conhecer o Projeto
+              {t("hero.cta1")}
               <ArrowRight className="h-4 w-4" />
             </a>
           </Button>
           <Button size="lg" variant="outline" asChild className="gap-2 border-border text-foreground hover:bg-secondary">
-            <a href="#equipe">Conheça a Equipe</a>
+            <a href="#equipe">{t("hero.cta2")}</a>
           </Button>
         </div>
 
         {/* Stats row */}
         <div className="mx-auto mt-20 grid max-w-3xl grid-cols-2 gap-8 md:grid-cols-4">
-          {[
-            { value: "10k+", label: "Textos rotulados" },
-            { value: "521", label: "Palavras por texto" },
-            { value: "UFSC", label: "Universidade" },
-            { value: "R$5M", label: "Projeto Ceos" },
-          ].map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center">
+          {stats.map((stat) => (
+            <div key={stat.labelKey} className="flex flex-col items-center">
               <span className="text-2xl font-bold text-foreground md:text-3xl">
-                {stat.value}
+                {t(stat.valueKey)}
               </span>
               <span className="mt-1 text-xs text-muted-foreground md:text-sm">
-                {stat.label}
+                {t(stat.labelKey)}
               </span>
             </div>
           ))}

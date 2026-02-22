@@ -1,7 +1,12 @@
+"use client"
+
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useI18n } from "@/lib/i18n"
 
 export function CtaSection() {
+  const { t } = useI18n()
+
   return (
     <section id="contato" className="py-20 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
@@ -11,17 +16,15 @@ export function CtaSection() {
 
           <div className="relative">
             <h2 className="text-balance text-3xl font-bold text-foreground md:text-4xl">
-              Quer saber mais sobre o Catarina Label AI?
+              {t("cta.title")}
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-pretty text-muted-foreground leading-relaxed">
-              Estamos na fase de ideacao e validacao. Se voce e pesquisador,
-              empreendedor ou representa uma instituicao interessada em
-              rotulagem inteligente de dados, entre em contato conosco.
+              {t("cta.subtitle")}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" asChild className="gap-2">
                 <a href="mailto:hudson.silva@ifpa.edu.br">
-                  Entrar em Contato
+                  {t("cta.btn1")}
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </Button>
@@ -31,7 +34,7 @@ export function CtaSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Conectar no LinkedIn
+                  {t("cta.btn2")}
                 </a>
               </Button>
             </div>

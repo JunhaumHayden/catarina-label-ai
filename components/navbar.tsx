@@ -1,19 +1,29 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useI18n, type Locale } from "@/lib/i18n"
 
 const navLinks = [
-  { label: "Sobre", href: "#sobre" },
-  { label: "Tecnologias", href: "#tecnologias" },
-  { label: "Equipe", href: "#equipe" },
-  { label: "Impacto", href: "#impacto" },
-  { label: "Contato", href: "#contato" },
+  { labelKey: "nav.about", href: "#sobre" },
+  { labelKey: "nav.technologies", href: "#tecnologias" },
+  { labelKey: "nav.team", href: "#equipe" },
+  { labelKey: "nav.impact", href: "#impacto" },
+  { labelKey: "nav.contact", href: "#contato" },
+]
+
+const languages: { code: Locale; label: string; flag: string }[] = [
+  { code: "en", label: "English", flag: "EN" },
+  { code: "pt", label: "Portugues", flag: "PT" },
 ]
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [langOpen, setLangOpen] = useState(false)
+  const { locale, setLocale, t } = useI18n()
+
+  const currentLang = languages.find((l) => l.code === locale)!
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
@@ -34,24 +44,78 @@ export function Navbar() {
               href={link.href}
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              {link.label}
+              {t(link.labelKey)}
             </a>
           ))}
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-3 md:flex">
+          {/* Language Switcher */}
+          <div className="relative">
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className="flex items-center gap-1.5 rounded-lg border border-border bg-secondary px-3 py-1.5 text-sm text-secondary-foreground transition-colors hover:bg-secondary/80"
+              aria-label="Select language"
+            >
+              <Globe className="h-3.5 w-3.5" />
+              <span className="font-medium">{currentLang.flag}</span>
+            </button>
+            {langOpen && (
+              <>
+                <div
+                  className="fixed inset-0 z-40"
+                  onClick={() => setLangOpen(false)}
+                />
+                <div className="absolute right-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-lg border border-border bg-card shadow-lg">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => {
+                        setLocale(lang.code)
+                        setLangOpen(false)
+                      }}
+                      className={`flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors hover:bg-secondary ${
+                        locale === lang.code
+                          ? "bg-primary/10 text-primary"
+                          : "text-card-foreground"
+                      }`}
+                    >
+                      <span className="font-mono text-xs font-bold">{lang.flag}</span>
+                      <span>{lang.label}</span>
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+
           <Button asChild size="sm">
-            <a href="#contato">Fale Conosco</a>
+            <a href="#contato">{t("nav.contactUs")}</a>
           </Button>
         </div>
 
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
-        >
-          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          {/* Mobile Language Switcher */}
+          <button
+            onClick={() => {
+              const next = locale === "en" ? "pt" : "en"
+              setLocale(next as Locale)
+            }}
+            className="flex items-center gap-1 rounded-lg border border-border bg-secondary px-2.5 py-1.5 text-xs font-medium text-secondary-foreground"
+            aria-label="Toggle language"
+          >
+            <Globe className="h-3.5 w-3.5" />
+            {currentLang.flag}
+          </button>
+
+          <button
+            className="text-foreground"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? t("nav.closeMenu") : t("nav.openMenu")}
+          >
+            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </nav>
 
       {mobileOpen && (
@@ -64,12 +128,12 @@ export function Navbar() {
                 className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 onClick={() => setMobileOpen(false)}
               >
-                {link.label}
+                {t(link.labelKey)}
               </a>
             ))}
             <Button asChild size="sm" className="w-full">
               <a href="#contato" onClick={() => setMobileOpen(false)}>
-                Fale Conosco
+                {t("nav.contactUs")}
               </a>
             </Button>
           </div>
