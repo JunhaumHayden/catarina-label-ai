@@ -13,7 +13,7 @@ export function Footer() {
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary overflow-hidden">
             <img
 //               src={`${getBasePath()}/logo-48x48.png`}
-              src="https://github.com/user-attachments/assets/176a54bb-79e6-4d3c-80fa-451fdda05987"
+              src="https://private-user-images.githubusercontent.com/79289647/553284684-21bc64b5-2f01-49b4-aae3-446a4e5028bd.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzE4MTAyNjIsIm5iZiI6MTc3MTgwOTk2MiwicGF0aCI6Ii83OTI4OTY0Ny81NTMyODQ2ODQtMjFiYzY0YjUtMmYwMS00OWI0LWFhZTMtNDQ2YTRlNTAyOGJkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAyMjMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMjIzVDAxMjYwMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTVmMDcyODMyNzNlODEzN2E1NmJlM2MzNGE2MzY2NzllYmY5MzY1YjVlZTBlMGY1M2U0ZjQxNTUzNjc0NzZkMGUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.CMiJFG3JxR8VjmOasUKte9eozgg9vs8dibBQmgLVkDg"
               alt="Catarina Label AI Logo"
               className="h-full w-full object-cover"
             />
