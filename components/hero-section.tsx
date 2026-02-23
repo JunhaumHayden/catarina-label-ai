@@ -31,6 +31,12 @@ export function HeroSection() {
         </Badge>
 
         <h1 className="mx-auto max-w-4xl text-balance text-4xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl">
+          <img
+//               src={`${getBasePath()}/logo-48x48.png`}
+              src="https://github.com/user-attachments/assets/60d250d7-68db-4a00-80d4-0dc1d6ef78e4"
+              alt="Catarina Label AI Logo"
+              className="h-full w-full object-cover"
+            />
           Catarina Label{" "}
           <span className="text-primary">AI</span>
         </h1>

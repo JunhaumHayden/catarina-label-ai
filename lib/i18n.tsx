@@ -23,7 +23,7 @@ const translations: Record<Locale, Record<string, string>> = {
     "nav.closeMenu": "Close menu",
 
     // Hero
-    "hero.badge": "Fundo Catarina Project",
+    "hero.badge": "Catarina Label AI Project",
     "hero.subtitle":
       "Semi-automated data labeling framework that uses Artificial Intelligence to accelerate model training, focused on the legal sector.",
     "hero.cta1": "Discover the Project",
@@ -152,7 +152,7 @@ const translations: Record<Locale, Record<string, string>> = {
 
     // Footer
     "footer.description":
-      "Developed by researchers from the Federal University of Santa Catarina (UFSC) \u2014 Fundo Catarina Project",
+      "Developed by researchers from the Federal University of Santa Catarina (UFSC) \u2014 Catarina Label AI Project",
     "footer.about": "About",
     "footer.team": "Team",
     "footer.contact": "Contact",
@@ -169,7 +169,7 @@ const translations: Record<Locale, Record<string, string>> = {
     "nav.closeMenu": "Fechar menu",
 
     // Hero
-    "hero.badge": "Projeto Fundo Catarina",
+    "hero.badge": "Projeto Catarina Label AI",
     "hero.subtitle":
       "Framework semi-automatizado de rotulagem de dados que utiliza Inteligência Artificial para acelerar o treinamento de modelos, com foco no setor jurídico.",
     "hero.cta1": "Conhecer o Projeto",
@@ -298,7 +298,7 @@ const translations: Record<Locale, Record<string, string>> = {
 
     // Footer
     "footer.description":
-      "Desenvolvido por pesquisadores da Universidade Federal de Santa Catarina (UFSC) \u2014 Projeto Fundo Catarina",
+      "Desenvolvido por pesquisadores da Universidade Federal de Santa Catarina (UFSC) \u2014 Projeto Catarina Label AI",
     "footer.about": "Sobre",
     "footer.team": "Equipe",
     "footer.contact": "Contato",
