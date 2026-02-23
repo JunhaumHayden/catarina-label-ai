@@ -37,7 +37,7 @@ const team: TeamMember[] = [
     bioKey: "member.hudson.bio",
     lattes: "http://lattes.cnpq.br/7304886482933850",
     linkedin: "https://www.linkedin.com/in/hudson-afonso-167b1321",
-    image: "/placeholder-user.jpg",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFLZsucIlarxQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692063945016?e=1773273600&v=beta&t=KYKjbDs5lA5IF3Sl9yO-AWQ0ySiy4Hw45lXxcnXI9bM",
   },
   {
     name: "Paulo Marcos de Assis",
@@ -49,7 +49,7 @@ const team: TeamMember[] = [
     bioKey: "member.paulo.bio",
     lattes: "https://lattes.cnpq.br/5654791012928641",
     linkedin: "https://www.linkedin.com/in/paulo-marcos-02b29b306",
-    image: "/placeholder-user.jpg",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQFMGqdAcEoy7Q/profile-displayphoto-shrink_800_800/B56ZedeW4pHEAc-/0/1750693681497?e=1773273600&v=beta&t=x7zQXLaTzVvkeqdo3DZBXLM9YTreid01HoZ_rd4D5sM",
   },
   {
     name: "Pedro Henrique Azevedo",
@@ -61,7 +61,7 @@ const team: TeamMember[] = [
     bioKey: "member.pedro.bio",
     lattes: "https://lattes.cnpq.br/7950947410325604",
     linkedin: "https://www.linkedin.com/in/pedro-henrique-azevedo-501300145",
-    image: "/placeholder-user.jpg",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQEa46A2GmxDKg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724645031387?e=1773273600&v=beta&t=ceNw2Hvrot2mXpO0i9efjqmOUmpL3QzsRbsCR_v0Xw4",
   },
   {
     name: "Carlos Benedito Hayden de Albuquerque Junior",
@@ -73,7 +73,7 @@ const team: TeamMember[] = [
     bioKey: "member.carlos.bio",
     lattes: "https://lattes.cnpq.br/6805864277419502",
     linkedin: "https://www.linkedin.com/in/carlos-hayden-junior/",
-    image: "/placeholder-user.jpg",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFolDMAbuSrpA/profile-displayphoto-shrink_800_800/B4DZZPIZeZGkAo-/0/1745084324201?e=1773273600&v=beta&t=cS9QobyC9tu5HQq0bE2is7JqBRGlIEUfyt5qlmVzOpc",
   },
   {
     name: "Francisco Bortolanza",
@@ -97,7 +97,7 @@ const team: TeamMember[] = [
     bioKey: "member.eduardo.bio",
     lattes: "https://buscatextual.cnpq.br/buscatextual/visualizacv.do",
     linkedin: "https://www.linkedin.com/in/eduardo-cacilha-196581124/",
-    image: "/placeholder-user.jpg",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHvLmpQs1A6jQ/profile-displayphoto-crop_800_800/B4DZl8qUbwH4AI-/0/1758733095320?e=1773273600&v=beta&t=EN3UxM3gwD-4AcYcqCz7VqIWc05rTtfPJP7fmvnfA1E",
   },
 ]
 

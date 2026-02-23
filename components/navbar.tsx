@@ -30,8 +30,12 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href={getBasePath()} className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <span className="text-sm font-bold text-primary-foreground">CL</span>
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary overflow-hidden">
+            <img
+              src={`${getBasePath()}/logo-48x48.png`}
+              alt="Catarina Label AI Logo"
+              className="h-full w-full object-cover"
+            />
           </div>
           <span className="text-lg font-bold text-foreground">
             Catarina<span className="text-primary">Label</span>

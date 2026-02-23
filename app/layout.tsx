@@ -14,19 +14,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/catarina-label-ai/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/catarina-label-ai/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/catarina-label-ai/icon.svg',
-        type: 'image/svg+xml',
+        url: '/catarina-label-ai/logo-48x48.png',
+        type: 'image/png',
       },
     ],
-    apple: '/catarina-label-ai/apple-icon.png',
+    apple: '/catarina-label-ai/logo-200x200.png',
   },
 }
 
