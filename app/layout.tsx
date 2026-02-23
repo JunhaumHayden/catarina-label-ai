@@ -14,11 +14,13 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/catarina-label-ai/logo-48x48.png',
+//         url: '/catarina-label-ai/logo-48x48.png',
+        url: 'https://github.com/user-attachments/assets/176a54bb-79e6-4d3c-80fa-451fdda05987',
         type: 'image/png',
       },
     ],
-    apple: '/catarina-label-ai/logo-200x200.png',
+//     apple: '/catarina-label-ai/logo-200x200.png',
+    apple: 'https://github.com/user-attachments/assets/176a54bb-79e6-4d3c-80fa-451fdda05987',
   },
 }
 

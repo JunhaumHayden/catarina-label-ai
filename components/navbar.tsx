@@ -32,7 +32,7 @@ export function Navbar() {
         <a href={getBasePath()} className="flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary overflow-hidden">
             <img
-              src={`${getBasePath()}/logo-48x48.png`}
+              src={`https://github.com/user-attachments/assets/176a54bb-79e6-4d3c-80fa-451fdda05987`}
               alt="Catarina Label AI Logo"
               className="h-full w-full object-cover"
             />
