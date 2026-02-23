@@ -32,10 +32,9 @@ export function HeroSection() {
 
         <h1 className="mx-auto max-w-4xl text-balance text-4xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl">
           <img
-//               src={`${getBasePath()}/logo-48x48.png`}
-              src="https://github.com/user-attachments/assets/60d250d7-68db-4a00-80d4-0dc1d6ef78e4"
+              src="'https://github.com/user-attachments/assets/54f1f596-4c9e-4e85-b24b-569330969a37"
               alt="Catarina Label AI Logo"
-              className="h-full w-full object-cover"
+              className="h-[50px] w-[50px] rounded-full object-cover"
             />
           Catarina Label{" "}
           <span className="text-primary">AI</span>
