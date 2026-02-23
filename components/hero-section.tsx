@@ -34,7 +34,7 @@ export function HeroSection() {
           <img
               src="'https://github.com/user-attachments/assets/54f1f596-4c9e-4e85-b24b-569330969a37"
               alt="Catarina Label AI Logo"
-              className="h-[50px] w-[50px] rounded-full object-cover"
+              className="h-[150px] w-[150px] rounded-full object-cover"
             />
           Catarina Label{" "}
           <span className="text-primary">AI</span>
