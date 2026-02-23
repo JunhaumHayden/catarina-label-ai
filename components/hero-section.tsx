@@ -30,12 +30,15 @@ export function HeroSection() {
           <span>{t("hero.badge")}</span>
         </Badge>
 
-        <h1 className="mx-auto max-w-4xl text-balance text-4xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl">
+        <div className="flex flex-col items-center justify-center text-center">
           <img
-              src="'https://github.com/user-attachments/assets/54f1f596-4c9e-4e85-b24b-569330969a37"
-              alt="Catarina Label AI Logo"
-              className="h-[150px] w-[150px] rounded-full object-cover"
-            />
+            src="https://github.com/user-attachments/assets/54f1f596-4c9e-4e85-b24b-569330969a37"
+            alt="Catarina Label AI Logo"
+            className="mb-6 h-[150px] w-[150px] rounded-full object-cover"
+          />
+        </div>
+
+        <h1 className="mx-auto max-w-4xl text-balance text-4xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl">
           Catarina Label{" "}
           <span className="text-primary">AI</span>
         </h1>
